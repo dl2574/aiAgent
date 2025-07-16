@@ -12,12 +12,13 @@ class Calculator:
             "+": 1,
             "-": 1,
             "*": 2,
-            "/": 2,
+            "/": 2
         }
 
     def evaluate(self, expression):
         if not expression or expression.isspace():
             return None
+
         tokens = expression.strip().split()
         return self._evaluate_infix(tokens)
 
